@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Роман Пожаров](https://up.htmlacademy.ru/adaptive/13/user/210437).
-* Наставник: `Неизвестно`.
+* Наставник: `Отсутствует`.
 
 ---
 
