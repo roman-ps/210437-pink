@@ -9,8 +9,8 @@
   <body>
 
     <header class="header header--form">
-      <div class="wrapper">
-        <div class="header-container">
+      <div class="header-container">
+        <div class="wrapper">
           <div class="header-top">
             <a class="header-logo" href="index.html">PINK</a>
             <button class="header-btn" type="button" title="Close">X</button>
@@ -29,8 +29,9 @@
     </header>
 
     <div class="form">
-      <div class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</div>
-      <div class="form-list">
+      <div class="wrapper">
+        <div class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</div>
+
         <div class="form-user">
           <div class="form-user__item">
             <label for="surname">Фамилия:</label>
@@ -47,7 +48,10 @@
             <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
           </div>
         </div>
-        <div class="form-progress">
+      </div>
+
+      <div class="form-progress">
+        <div class="wrapper">
           <div class="form-progress__title">Ваши безбашенные достижения в путешествии</div>
           <div class="form-progress__list">
             <div class="form-progress__item">
@@ -81,6 +85,9 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="wrapper">
         <div class="form-contact">
           <div class="form-contact__item">
             <label for="phone">Номер телефона</label>
@@ -92,7 +99,10 @@
             <input type="email" id="email" name="email" placeholder="Введите почту *" required>
           </div>
         </div>
-        <div class="form-app">
+      </div>
+
+      <div class="form-app">
+        <div class="wrapper">
           <div class="form-app__title">С каким приложением путешествовали?</div>
           <div class="form-app__list">
             <div class="form-app__item">
@@ -111,10 +121,16 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="wrapper">
         <div class="form-result">
           <div class="form-result__title">Опишите свои эмоции</div>
           <textarea class="form-result__text" name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
         </div>
+      </div>
+
+      <div class="wrapper">
         <div class="form-submit">
           <button class="form-submit__btn" type="submit">Отправить форму</button>
           <div class="form-submit__required"><span class="form-submit__sign">*</span>- обязательные поля</div>
@@ -122,15 +138,17 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <a class="footer-logo" href="https://htmlacademy.ru/intensive/adaptive">PINK</a>
-      <div class="footer-social">
-        <a class="footer-social__item footer-social__item--twitter" href="#">Twitter</a>
-        <a class="footer-social__item footer-social__item--facebook" href=#>Facebook</a>
-        <a class="footer-social__item footer-social__item--youtube" href="#">Youtube</a>
-      </div>
-      <a class="footer-copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-    </footer>
+    <div class="wrapper">
+      <footer class="footer">
+        <a class="footer-logo" href="https://htmlacademy.ru/intensive/adaptive">PINK</a>
+        <div class="footer-social">
+          <a class="footer-social__item footer-social__item--twitter" href="#">Twitter</a>
+          <a class="footer-social__item footer-social__item--facebook" href=#>Facebook</a>
+          <a class="footer-social__item footer-social__item--youtube" href="#">Youtube</a>
+        </div>
+        <a class="footer-copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      </footer>
+    </div>
 
     <div class="popup-success">
       <div class="popup-success__title">Что-то пошло не так!</div>
@@ -145,5 +163,4 @@
     </div>
 
   </body>
-
 </html>

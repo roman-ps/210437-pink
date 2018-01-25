@@ -1,0 +1,22 @@
+.photo-title {
+  text-align: center;
+  padding: 10px 35px;
+}
+
+.photo-item {
+  margin-bottom: 20px;
+
+  &--top {
+  }
+}
+
+.photo-comment {
+  background: #f2f2f2;
+
+  &--top {
+  }
+}
+
+.photo-comment__like {
+  color: #d22856;
+}
