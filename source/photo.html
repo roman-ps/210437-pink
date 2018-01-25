@@ -3,21 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк Фото</title>
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
 
     <header class="header header--photo">
-
-      <div class="header-container">
-        <a class="header-logo" href="index.html">PINK</a>
-        <button class="header-btn" type="button" title="Close">X</button>
+      <div class="wrapper">
+        <div class="header-container">
+          <div class="header-top">
+            <a class="header-logo" href="index.html">PINK</a>
+            <button class="header-btn" type="button" title="Close">X</button>
+          </div>
+          <nav>
+            <ul class="header-menu">
+              <li class="header-menu__item"><a class="header-menu__item-link" href="index.html">Главная</a></li>
+              <li class="header-menu__item"><a class="header-menu__item-link header-menu__item-link--active" href="#">Фотографии</a></li>
+              <li class="header-menu__item"><a class="header-menu__item-link" href="form.html">Конкурс</a></li>
+              <li class="header-menu__item"><a class="header-menu__item-link" href="https://htmlacademy.ru/">HTML Academy</a></li>
+            </ul>
+          </nav>
+        </div>
+        <h2 class="header-text">Фотографии пользователей</h2>
       </div>
-      <h2 class="header-text">Фотографии пользователей</h2>
-
     </header>
 
     <div class="photo">
-
       <p class="photo-title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
       <div class="photo-item photo-item--top">
         <img src="http://placehold.it/320x137">
@@ -82,11 +93,9 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="upload">
-
       <div class="upload-top">
         <div class="upload-title">Затмите их всех!</div>
         <div class="upload-subtitle">Выкладывайте все, что накопилось в телефоне!</div>
@@ -108,11 +117,9 @@
           <button class="upload-submit__item upload-submit__item--cansel" type="reset">Отмена</button>
         </div>
       </form>
-
     </div>
 
     <footer class="footer">
-
       <a class="footer-logo" href="https://htmlacademy.ru/intensive/adaptive">PINK</a>
       <div class="footer-social">
         <a class="footer-social__item footer-social__item--twitter" href="#">Twitter</a>
@@ -120,7 +127,6 @@
         <a class="footer-social__item footer-social__item--youtube" href="#">Youtube</a>
       </div>
       <a class="footer-copyright" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
-
     </footer>
 
 

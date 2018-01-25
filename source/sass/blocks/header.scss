@@ -1,0 +1,19 @@
+.header {
+  padding-bottom: 400px;
+
+  &--index {
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 90%, 50% 0;
+    background-size: 258px auto, 320px auto;
+  }
+}
+
+.header-container {
+  background: #283645;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
