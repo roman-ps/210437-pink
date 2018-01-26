@@ -16,3 +16,8 @@
   border: 3px solid #e9ebec;
   border-radius: 50%;
 }
+
+.footer-copyright {
+  @include ff(14px, 400, 18px);
+  text-decoration: none;
+}

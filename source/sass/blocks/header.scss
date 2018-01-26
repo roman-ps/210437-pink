@@ -50,6 +50,7 @@
 }
 
 .header-text {
+  @include h2;
   color: #ffffff;
   padding: 30px 20px 70px 20px;
   text-align: center;

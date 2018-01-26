@@ -2,6 +2,11 @@
   background: #f2f2f2;
 }
 
+.upload-top {
+  @include ff(14px, 400, 30px);
+  text-align: center;
+}
+
 .upload-options {
   display: flex;
   justify-content: space-around;
@@ -41,4 +46,20 @@
 .upload-submit {
   display: flex;
   flex-direction: column;
+}
+
+.upload-submit__item {
+  @include ff(18px, 700, 18px);
+  border-radius: 35px;
+  padding: 14px 0 17px 0;
+
+  &--post {
+    border: 3px solid #d22856;
+    color: #d22856;
+  }
+
+  &--cansel {
+    border: 3px solid #000000;
+    opacity: .1;
+  }
 }
