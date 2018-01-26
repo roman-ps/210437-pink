@@ -3,6 +3,7 @@
 }
 
 .download-btn {
+  @include ff(18px, 700, 18px);
   color: #ffffff;
   text-decoration: none;
 }
@@ -13,5 +14,7 @@
 }
 
 .download-text {
+  @include ff(14px, 300, 24px);
   color: #ffffff;
+  text-align: center;
 }

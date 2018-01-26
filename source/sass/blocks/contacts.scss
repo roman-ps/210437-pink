@@ -1,7 +1,21 @@
 .contacts-title {
+  @include h2;
   text-align: center;
 }
 
 .contacts-item {
   text-align: center;
+}
+
+.contacts-item__title {
+  @include ff(18px, 700, 24px);
+}
+
+.contacts-item__text {
+  @include ff(24px, 300, 30px);
+  color: #d22856;
+}
+
+.contacts-iframe {
+  width: 100%;
 }

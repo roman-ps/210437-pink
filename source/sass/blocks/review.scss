@@ -7,10 +7,14 @@
   }
 }
 
-.review-item__name {
+.review-item {
   text-align: center;
 }
 
+.review-item__name {
+  @include ff(18px, 700, 30px);
+}
+
 .review-item__text {
-  text-align: center;
+  @include ff(14px, 400, 30px);
 }
