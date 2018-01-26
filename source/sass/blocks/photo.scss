@@ -1,0 +1,31 @@
+.photo-title {
+  @include ff(14px, 400, 30px);
+  text-align: center;
+  width: 245px;
+  margin: 0 auto;
+}
+
+.photo-item {
+  margin-bottom: 20px;
+}
+
+.photo-comment {
+  background: #f2f2f2;
+}
+
+.photo-comment__name {
+  @include ff(14px, 700, 24px);
+}
+
+.photo-comment__time {
+  @include ff(12px, 300, 24px);
+}
+
+.photo-comment__quote {
+  @include ff(14px, 400, 24px);
+}
+
+.photo-comment__like {
+  @include ff(12px, 400, 24px);
+  color: #d22856;
+}

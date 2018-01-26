@@ -1,0 +1,20 @@
+.download {
+  background-color: #1d2631;
+}
+
+.download-btn {
+  @include ff(18px, 700, 18px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.download-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.download-text {
+  @include ff(14px, 300, 24px);
+  color: #ffffff;
+  text-align: center;
+}

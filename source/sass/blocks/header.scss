@@ -1,0 +1,57 @@
+.header {
+  @include ff(18px, 700, 32px);
+
+  &--index {
+    padding-bottom: 400px;
+    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 100%, 50% 100%;
+    background-size: 258px auto, 320px auto;
+  }
+
+  &--photo {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 320px auto;
+  }
+
+  &--form {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 320px auto;
+  }
+}
+
+.header-container {
+  background: #283645;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-menu {
+  padding-left: 0;
+}
+
+.header-menu__item {
+  list-style: none;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.header-menu__item-link {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header-text {
+  @include h2;
+  color: #ffffff;
+  padding: 30px 20px 70px 20px;
+  text-align: center;
+}

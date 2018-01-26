@@ -1,0 +1,18 @@
+.price-table__row {
+  @include ff(14px, 400, 30px);
+  border: 2px solid #e5e5e5;
+
+  &--top {
+    background: #283645;
+    color: #ffffff;
+    text-align: center;
+  }
+}
+
+.price-table__row-status {
+  @include ff(18px, 700, 30px);
+}
+
+.price-table__row-price {
+  @include ff(24px, 300, 30px);
+}

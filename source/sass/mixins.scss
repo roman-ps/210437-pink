@@ -1,0 +1,29 @@
+@mixin pseudo {
+  display: block;
+  position: absolute;
+  content: '';
+}
+
+@mixin h2 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+@mixin h2-tablet {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 48px;
+}
+
+@mixin h2-desktop {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 60px;
+}
+
+@mixin ff($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}

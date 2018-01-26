@@ -1,0 +1,23 @@
+.info-list {
+  background: #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-position: 50% 112%;
+  padding-bottom: 300px;
+}
+
+.info-title,
+.info-subtitle {
+  @include h2;
+  text-align: center;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item__title {
+  @include ff(18px, 700, 24px);
+}
+
+.info-item__text {
+  @include ff(14px, 400, 24px);
+}
