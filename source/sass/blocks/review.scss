@@ -1,14 +1,11 @@
 .review-item {
   display: none;
+  text-align: center;
 
   &--active {
     display: flex;
     flex-direction: column;
   }
-}
-
-.review-item {
-  text-align: center;
 }
 
 .review-item__name {
