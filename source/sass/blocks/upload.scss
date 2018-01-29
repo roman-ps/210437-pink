@@ -32,14 +32,37 @@
   }
 }
 
-.upload-filter__item {
-  background: #000000;
+.upload-filter {
+  margin: 0 auto;
   width: 240px;
-  height: 2px;
+
+}
+
+.upload-filter__item {
+  position: relative;
   display: none;
+  padding: 35px 0;
 
   &--active {
     display: block;
+  }
+
+  &::before {
+    @include pseudo;
+    background: #000000;
+    width: 100%;
+    height: 2px;
+  }
+
+  &::after {
+    @include pseudo;
+    width: 10px;
+    height: 10px;
+    background-color: #f2f2f2;
+    border: 2px solid #d22856;
+    border-radius: 10px;
+    top: 28px;
+    right: 20px;
   }
 }
 
@@ -61,5 +84,33 @@
   &--cansel {
     border: 3px solid #000000;
     opacity: 0.1;
+  }
+}
+
+@media ($tablet) {
+
+  .upload-top {
+    @include ff(18px, 400, 30px);
+  }
+
+  .upload-form .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .upload-container {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 0 18px 0 25px;
+    outline: 1px solid red;
+  }
+
+  .upload-filter {
+    width: 202px;
+    margin: 0 0 0 auto;
+  }
+
+  .upload-filter__item {
+    display: block;
   }
 }

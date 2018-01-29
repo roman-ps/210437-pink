@@ -1,12 +1,7 @@
 .header {
-  @include ff(18px, 700, 32px);
 
   &--index {
-    padding-bottom: 400px;
-    background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50% 100%, 50% 100%;
-    background-size: 258px auto, 320px auto;
+
   }
 
   &--photo {
@@ -33,25 +28,147 @@
   justify-content: space-between;
 }
 
+.header-logo {
+  color: #ffffff;
+}
+
 .header-menu {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 .header-menu__item {
   list-style: none;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 .header-menu__item-link {
+  @include ff(18px, 700, 32px);
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
 }
 
+.header-bg {
+  padding: 33px 0 85px 0;
+}
+
 .header-text {
   @include h2;
+  margin: 0 auto;
   color: #ffffff;
-  padding: 30px 20px 70px 20px;
   text-align: center;
+
+  &--photo {
+    width: 170px;
+  }
+
+  &--form {
+    width: 235px;
+  }
+}
+
+.header-download {
+  padding-top: 396px;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 50%, 50% -100%;
+  background-size: 258px auto, 320px auto;
+  background-color: #1d2631;
+}
+
+.header-download__title {
+  display: none;
+}
+
+.header-download__btn {
+  @include ff(18px, 700, 18px);
+  display: inline-block;
+  width: 100%;
+  padding: 11px 0 14px 0;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-download__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-download__text {
+  @include ff(14px, 300, 24px);
+  color: #ffffff;
+  text-align: center;
+}
+
+@media ($tablet) {
+
+  .header-download {
+    padding-top: 60px;
+  }
+
+  .header-download__container {
+    width: 300px;
+  }
+
+  .header-download__title {
+    @include h2-tablet;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .header-download__text {
+    @include ff(18px, 300, 24px);
+  }
+
+  .header-text {
+    @include h2-tablet;
+
+    &--photo {
+    width: 355px;
+    }
+
+    &--form {
+//      width: 235px;
+    }
+  }
+}
+
+@media ($desktop) {
+
+  .header .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .header-menu__item {
+    display: inline-block;
+    padding: 0 41px;
+  }
+
+  .header-menu__item:last-child {
+    padding-right: 0;
+  }
+
+  .header-menu__item-link {
+    @include ff(18px, 400, 18px);
+    text-transform: none;
+  }
+
+  .header-download__title {
+    @include h2-desktop;
+  }
+
+  .header-download__btn {
+    @include ff(21px, 700, 18px);
+  }
 }

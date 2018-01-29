@@ -1,19 +1,34 @@
-.download {
+.header-download {
+  padding-top: 396px;
+  background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 50%, 50% -100%;
+  background-size: 258px auto, 320px auto;
+}
+
+.header-download__container {
   background-color: #1d2631;
 }
 
-.download-btn {
+.header-download__title {
+  display: none;
+}
+
+.header-download__btn {
   @include ff(18px, 700, 18px);
+  padding: 11px 33px 14px 37px;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
   color: #ffffff;
   text-decoration: none;
 }
 
-.download-list {
+.header-download__list {
   display: flex;
   justify-content: space-around;
 }
 
-.download-text {
+.header-download__text {
   @include ff(14px, 300, 24px);
   color: #ffffff;
   text-align: center;

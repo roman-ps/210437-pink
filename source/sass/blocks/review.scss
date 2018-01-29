@@ -8,10 +8,48 @@
   }
 }
 
+.review-item__status {
+  display: none;
+}
+
 .review-item__name {
   @include ff(18px, 700, 30px);
 }
 
 .review-item__text {
   @include ff(14px, 400, 30px);
+}
+
+@media ($tablet) {
+
+  .review-item__name {
+    order: 2;
+  }
+
+  .review-item__text {
+    order: 1;
+  }
+
+  .review-item__status {
+    @include ff(14px, 400, 30px);
+    display: block;
+    order: 3;
+  }
+}
+
+@media ($desktop) {
+
+  .review-item {
+    width: 690px;
+    margin: 0 auto;
+  }
+
+  .review-item__name {
+    @include ff(24px, 700, 30px);
+  }
+
+  .review-item__text,
+  .review-item__status {
+    @include ff(18px, 400, 30px);
+  }
 }

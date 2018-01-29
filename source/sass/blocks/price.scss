@@ -1,18 +1,73 @@
+.price {
+  background: #f2f2f2;
+  overflow: hidden;
+}
+.price-table {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -553px;
+}
+
 .price-table__row {
   @include ff(14px, 400, 30px);
+  width: 280px;
+  box-sizing: border-box;
   border: 2px solid #e5e5e5;
+  border-top: none;
+  background: #ffffff;
 
   &--top {
     background: #283645;
     color: #ffffff;
     text-align: center;
   }
+
+  &--empty {
+    background: #f2f2f2;
+    border: 2px solid transparent;
+  }
 }
 
 .price-table__row-status {
   @include ff(18px, 700, 30px);
+  text-transform: uppercase;
 }
 
 .price-table__row-price {
   @include ff(24px, 300, 30px);
+}
+
+@media ($tablet) {
+
+  .price-table {
+    margin-left: 0;
+  }
+
+  .price-table__row {
+    width: 155px;
+  }
+
+  .price-table__row-status {
+    @include ff(16px, 700, 30px);
+  }
+
+  .price-table__row-price {
+    @include ff(18px, 300, 30px);
+  }
+}
+
+@media ($desktop) {
+
+  .price-table__row {
+    width: 236px;
+    @include ff(18px, 400, 30px);
+  }
+
+  .price-table__row-status {
+    @include ff(18px, 700, 30px);
+  }
+
+  .price-table__row-price {
+    @include ff(24px, 300, 30px);
+  }
 }
