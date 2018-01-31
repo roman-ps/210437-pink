@@ -132,10 +132,6 @@
     &--photo {
     width: 355px;
     }
-
-    &--form {
-//      width: 235px;
-    }
   }
 }
 
@@ -144,6 +140,10 @@
   .header .wrapper {
     display: flex;
     justify-content: space-between;
+  }
+
+  .header-container {
+    opacity: .3;
   }
 
   .header-btn {
@@ -170,5 +170,9 @@
 
   .header-download__btn {
     @include ff(21px, 700, 18px);
+  }
+
+  .header-text {
+    @include h2-desktop;
   }
 }
