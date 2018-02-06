@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+  .form-subtitle {
+    display: none;
+  }
+
 .form-user__item {
   display: flex;
   flex-direction: column;
@@ -37,6 +41,14 @@
   @include ff(18px, 400, 30px);
 }
 
+.form-contact__title {
+  display: none;
+  @include ff(14px, 400, 30px);
+  text-align: center;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
 .form-contact__item label {
   @include ff(14px, 400, 30px);
   color: #d22856;
@@ -53,9 +65,7 @@
 
 .form-app__title {
   @include ff(14px, 400, 18px);
-  width: 220px;
   text-align: center;
-  margin: 0 auto;
   color: #d22856;
   text-transform: uppercase;
 }
@@ -83,6 +93,8 @@
 }
 
 .form-submit__btn {
+  font-family: $fonts;
+  @include ff(18px, 700, 30px);
   width: 100%;
   padding: 16px 45px;
   text-transform: uppercase;
@@ -93,6 +105,7 @@
 }
 
 .form-submit__required {
+  @include ff(14px, 400, 30px);
   text-align: center;
   text-transform: uppercase;
 }
@@ -101,7 +114,168 @@
   color: #d22856;
 }
 
+.form-submit__hide {
+  display: none;
+}
+
 input,
 textarea {
   font-family: $fonts;
+}
+
+@media ($tablet) {
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-user {
+    order: 0;
+  }
+
+  .form-progress {
+    order: 4;
+    background: #ffffff;
+  }
+
+  .form-contact {
+    order: 3;
+  }
+
+  .form-app {
+    order: 1;
+    background: #ffffff;
+  }
+
+  .form-result {
+    order: 5;
+  }
+
+  .form-submit {
+    order: 6;
+  }
+
+  .form-title {
+    width: 490px;
+    @include ff(18px, 400, 30px);
+  }
+
+    .form-subtitle {
+      display: block;
+    }
+
+  .form-app__list,
+  .form-progress__list {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .form-submit .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-submit__btn {
+    width: 300px;
+  }
+
+  .form-user__item {
+    flex-direction: row;
+    margin-bottom: 52px;
+    align-items: center;
+  }
+
+  .form-user__item input {
+    flex-grow: 1;
+    border: 2px solid #e5e5e5;
+    padding: 17px 0 14px 21px;
+  }
+
+  .form-user__label {
+    padding-right: 20px;
+  }
+
+  .form-app__title {
+    padding: 0 10px;
+  }
+
+  .form-contact__title {
+    display: block;
+  }
+
+  .form-contact__item {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-contact__item label {
+    order: 1;
+    padding-left: 20px;
+  }
+
+  .form-contact__item input {
+    order: 0;
+    padding-left: 20px;
+  }
+
+  .form-progress__title {
+    white-space: nowrap;
+  }
+
+  .form-result__text {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+
+
+@media ($desktop) {
+
+  .form-title {
+    width: 760px;
+  }
+
+  .form-subtitle {
+    display: inline-block;
+  }
+
+  .form-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form-progress__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .form-progress__item {
+    width: 260px;
+  }
+
+  .form-result__text {
+    width: 820px;
+  }
+
+  .form-contact__container {
+    width: 820px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-contact__item {
+    width: 376px;
+  }
+
+  .form-submit__hide {
+    display: inline-block;
+  }
 }
