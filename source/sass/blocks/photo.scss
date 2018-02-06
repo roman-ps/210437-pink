@@ -9,6 +9,11 @@
   margin-bottom: 20px;
 }
 
+.photo-item img {
+  display: block;
+  margin: 0 auto;
+}
+
 .photo-comment {
   background: #f2f2f2;
 }
@@ -28,4 +33,67 @@
 .photo-comment__like {
   @include ff(12px, 400, 24px);
   color: #d22856;
+}
+
+@media ($tablet) {
+
+  .photo-title {
+    @include ff(18px, 400, 30px);
+    width: 440px;
+  }
+
+  .photo-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .photo-item {
+    width: 300px;
+  }
+
+  .photo-comment {
+    display: flex;
+    flex-direction: column;
+
+    &--top {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  .photo-comment__name {
+
+    &--top {
+      order: 1;
+      width: 150px;
+      flex-grow: 1;
+    }
+  }
+
+  .photo-comment__quote {
+
+    &--top {
+      order: 3;
+      width: 510px;
+      align-self: flex-start;
+    }
+  }
+
+  .photo-comment__like {
+    align-items: flex-end;
+
+    &--top {
+      order: 2;
+      width: 150px;
+    }
+  }
+}
+
+@media ($desktop) {
+
+  .photo-comment__quote {
+    @include ff(18px, 400, 30px);
+  }
 }

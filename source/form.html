@@ -25,115 +25,123 @@
           </nav>
         </div>
       </div>
-      <h2 class="header-text">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      <div class="header-bg">
+        <h2 class="header-text header-text--form">Конкурс на самое безбашенное путешествие с Пинк</h2>
+      </div>
     </header>
 
     <div class="form">
       <div class="wrapper">
-        <div class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту!</div>
-
+        <div class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на вашу бонусную карту! <span class="form-subtitle">Пожалуйста, заполните форму ниже:</span></div>
+      </div>
+      <div class="form-container">
         <div class="form-user">
-          <div class="form-user__item">
-            <label class="form-user__label" for="surname">Фамилия:</label>
-            <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
-          </div>
-
-          <div class="form-user__item">
-            <label class="form-user__label" for="name">Имя:</label>
-            <input type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
-          </div>
-
-          <div class="form-user__item">
-            <label class="form-user__label" for="patronymic">Отчество:</label>
-            <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
-          </div>
-        </div>
-      </div>
-
-      <div class="form-progress">
-        <div class="wrapper">
-          <div class="form-progress__title">Ваши безбашенные достижения в путешествии</div>
-          <div class="form-progress__list">
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress1" checked>
-              <label for="progress1">Сделал селфи с акулой</label>
+          <div class="wrapper wrapper-mini">
+            <div class="form-user__item">
+              <label class="form-user__label" for="surname">Фамилия:</label>
+              <input type="text" id="surname" name="surname" placeholder="Укажите фамилию *" required>
             </div>
 
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress2" checked>
-              <label for="progress2">Обгорел на пляже</label>
+            <div class="form-user__item">
+              <label class="form-user__label" for="name">Имя:</label>
+              <input type="text" id="name" name="name" placeholder="Введите ваше имя *" required>
             </div>
 
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress3">
-              <label for="progress3">Видел Чака Норриса</label>
-            </div>
-
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress4">
-              <label for="progress4">Накупил сувениров</label>
-            </div>
-
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress5" checked>
-              <label for="progress5">Удержал башню</label>
-            </div>
-
-            <div class="form-progress__item">
-              <input type="checkbox" id="progress6">
-              <label for="progress6">Разгромил отель</label>
+            <div class="form-user__item">
+              <label class="form-user__label" for="patronymic">Отчество:</label>
+              <input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="wrapper">
+        <div class="form-progress">
+          <div class="wrapper">
+            <div class="form-progress__title">Ваши безбашенные достижения в путешествии</div>
+            <div class="form-progress__list">
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress1" checked>
+                <label for="progress1">Сделал селфи с акулой</label>
+              </div>
+
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress2" checked>
+                <label for="progress2">Обгорел на пляже</label>
+              </div>
+
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress3">
+                <label for="progress3">Видел Чака Норриса</label>
+              </div>
+
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress4">
+                <label for="progress4">Накупил сувениров</label>
+              </div>
+
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress5" checked>
+                <label for="progress5">Удержал башню</label>
+              </div>
+
+              <div class="form-progress__item">
+                <input type="checkbox" id="progress6">
+                <label for="progress6">Разгромил отель</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="form-contact">
-          <div class="form-contact__item">
-            <label for="phone">Номер телефона</label>
-            <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
-          </div>
+          <div class="wrapper">
+            <div class="form-contact__title">Контактная информация</div>
+            <div class="form-contact__container">
+              <div class="form-contact__item">
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              </div>
 
-          <div class="form-contact__item">
-            <label for="email">Номер телефона</label>
-            <input type="email" id="email" name="email" placeholder="Введите почту *" required>
-          </div>
-        </div>
-      </div>
-
-      <div class="form-app">
-        <div class="wrapper">
-          <div class="form-app__title">С каким приложением путешествовали?</div>
-          <div class="form-app__list">
-            <div class="form-app__item">
-              <input type="radio" id="radio1" name="radio" checked>
-              <label for="radio1">Pink для iOS</label>
-            </div>
-
-            <div class="form-app__item">
-              <input type="radio" id="radio2" name="radio">
-              <label for="radio2">Pink на Android</label>
-            </div>
-
-            <div class="form-app__item">
-              <input type="radio" id="radio3" name="radio">
-              <label for="radio3">Windows Phone</label>
+              <div class="form-contact__item">
+                <label for="email">Адрес почты</label>
+                <input type="email" id="email" name="email" placeholder="Введите почту *" required>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="wrapper">
+        <div class="form-app">
+          <div class="wrapper wrapper-mini">
+            <div class="form-app__title">С каким приложением путешествовали?</div>
+            <div class="form-app__list">
+              <div class="form-app__item">
+                <input type="radio" id="radio1" name="radio" checked>
+                <label for="radio1">Pink для iOS</label>
+              </div>
+
+              <div class="form-app__item">
+                <input type="radio" id="radio2" name="radio">
+                <label for="radio2">Pink на Android</label>
+              </div>
+
+              <div class="form-app__item">
+                <input type="radio" id="radio3" name="radio">
+                <label for="radio3">Windows Phone</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="form-result">
-          <div class="form-result__title">Опишите свои эмоции</div>
-          <textarea class="form-result__text" name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <div class="wrapper">
+            <div class="form-result__title">Опишите свои эмоции</div>
+            <textarea class="form-result__text" name="textarea">Можно прям в красках, не стесняясь в выражениях</textarea>
+          </div>
         </div>
-      </div>
 
-      <div class="wrapper">
         <div class="form-submit">
-          <button class="form-submit__btn" type="submit">Отправить форму</button>
-          <div class="form-submit__required"><span class="form-submit__sign">*</span>- обязательные поля</div>
+          <div class="wrapper">
+            <button class="form-submit__btn" type="submit">Отправить форму</button>
+            <div class="form-submit__required"><span class="form-submit__sign">*</span>- обязательные <span class="form-submit__hide">для заполнения</span> поля</div>
+          </div>
         </div>
       </div>
     </div>

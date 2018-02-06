@@ -18,4 +18,52 @@
 
 .contacts-iframe {
   width: 100%;
+  border: none;
+}
+
+@media ($tablet) {
+
+  .contacts-title {
+    @include h2-tablet;
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  .contacts-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .contacts-item:nth-child(3) {
+    align-self: center;
+  }
+}
+
+@media ($desktop) {
+
+  .contacts-title {
+    @include h2-desktop;
+    width: 465px;
+  }
+
+  .contacts-item:nth-child(1) {
+    order: 1;
+  }
+
+  .contacts-item:nth-child(2) {
+    order: 3;
+  }
+
+  .contacts-item:nth-child(3) {
+    order: 2;
+  }
+
+  .contacts-item {
+    width: 215px;
+  }
+
+  .contacts-item__title {
+//    margin-bottom: 20px;
+  }
 }

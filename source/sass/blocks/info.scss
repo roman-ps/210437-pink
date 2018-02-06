@@ -1,11 +1,10 @@
-.info-list {
+.info-main {
   background: #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat;
   background-position: 50% 112%;
   padding-bottom: 300px;
 }
 
-.info-title,
-.info-subtitle {
+.info-title {
   @include h2;
   text-align: center;
 }
@@ -20,4 +19,54 @@
 
 .info-item__text {
   @include ff(14px, 400, 24px);
+}
+
+@media ($tablet) {
+
+  .info-title {
+    @include h2-tablet;
+  }
+
+  .info-main {
+    padding-bottom: 40px;
+    background-position: 10% 100%;
+  }
+
+  .info-list {
+    width: 310px;
+    margin-left: auto;
+  }
+
+  .info-item {
+    text-align: left;
+  }
+}
+
+@media ($desktop) {
+
+  .info-title {
+    @include h2-desktop;
+  }
+
+  .info-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .info-item {
+    background-color: transparent;
+    width: 238px;
+    padding-top: 320px;
+    text-align: center;
+  }
+
+  .info-item__title {
+    @include ff(30px, 700, 30px);
+  }
+
+  .info-item__text {
+    @include ff(18px, 400, 30px);
+  }
 }
