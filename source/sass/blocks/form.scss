@@ -5,9 +5,9 @@
   text-align: center;
 }
 
-  .form-subtitle {
-    display: none;
-  }
+.form-subtitle {
+  display: none;
+}
 
 .form-user__item {
   display: flex;
@@ -121,6 +121,73 @@
 input,
 textarea {
   font-family: $fonts;
+  outline: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  @include pseudo;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+input[type="radio"] + label::before {
+  @include pseudo;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+input[type="checkbox"]:checked + label::after {
+  @include pseudo;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 16px;
+}
+
+input[type="radio"]:checked + label::after {
+  @include pseudo;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  width: 36px;
+  height: 36px;
+  top: 0px;
+  left: 0px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+  border: 2px solid #d22856;
+}
+
+input[type="checkbox"]:hover + label:before,
+input[type="radio"]:hover + label:before,
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover {
+  border: 2px solid #283645;
+}
+
+input[type="checkbox"]:active + label:before,
+input[type="radio"]:active + label:before {
+  border: 2px solid #d22856;
 }
 
 @media ($tablet) {
