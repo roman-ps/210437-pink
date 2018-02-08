@@ -178,5 +178,9 @@
 
   .header-text {
     @include h2-desktop;
+
+    &--form {
+      width: 760px;
+    }
   }
 }
