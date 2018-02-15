@@ -1,24 +1,3 @@
-.header {
-
-  &--index {
-
-  }
-
-  &--photo {
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: 320px auto;
-  }
-
-  &--form {
-    background-image: url("../img/bg-back-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: 320px auto;
-  }
-}
-
 .header-container {
   background: #283645;
 }
@@ -26,10 +5,31 @@
 .header-top {
   display: flex;
   justify-content: space-between;
+  padding: 21px 0 11px 0;
 }
 
 .header-logo {
-  color: #ffffff;
+  display: block;
+  width: 75px;
+  height: 22px;
+  font-size: 0;
+}
+
+.header-open {
+  display: none;
+}
+
+.header-close {
+  width: 24px;
+  height: 23px;
+  background: transparent url("../img/icon-menu-cross.svg") no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.header-close,
+.header-open {
+  font-size: 0;
 }
 
 .header-menu {
@@ -38,9 +38,28 @@
 }
 
 .header-menu__item {
+  position: relative;
+  padding: 17px 0 15px 0;
   list-style: none;
   text-align: center;
-  padding: 20px 0;
+
+  &::before,
+  &::after {
+    @include pseudo;
+    width: 100vw;
+    height: 1px;
+    left: calc((100vw - 280px)/-2);
+  }
+
+  &::before {
+    top: 0;
+    background-color: #485461;
+  }
+
+  &::after {
+    bottom: 0;
+    background-color: #010101;
+  }
 }
 
 .header-menu__item-link {
@@ -48,10 +67,18 @@
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+
+  &--active {
+    border-bottom: 2px solid #ffffff;
+  }
 }
 
 .header-bg {
   padding: 33px 0 85px 0;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 700px auto;
 }
 
 .header-text {
@@ -70,12 +97,16 @@
 }
 
 .header-download {
-  padding-top: 396px;
+  padding-top: 423px;
   background-image: url("../img/iphone-hand-mobile@1x.png"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
-  background-position: center 50%, 50% -100%;
-  background-size: 258px auto, 320px auto;
+  background-position: 0 29%, 50% -33%;
+  background-size: 258px auto, 700px auto;
   background-color: #1d2631;
+}
+
+.header-download__container {
+  background: #1d2631;
 }
 
 .header-download__title {
@@ -85,30 +116,66 @@
 .header-download__btn {
   @include ff(18px, 700, 18px);
   display: inline-block;
-  width: 100%;
-  padding: 11px 0 14px 0;
+  padding: 15px 33px 16px 37px;
   border: 3px solid #ffffff;
   border-radius: 30px;
-  text-align: center;
   color: #ffffff;
   text-decoration: none;
+  margin-bottom: 30px;
 }
 
 .header-download__list {
+  width: 241px;
+  margin: 0 auto 24px auto;
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
+}
+
+.header-download__item {
+  display: block;
+  font-size: 0;
+
+  &--apple {
+    background: url(../img/logo-apple.svg) no-repeat;
+    width: 47px;
+    height: 56px;
+  }
+
+  &--android {
+    background: url(../img/logo-android.svg) no-repeat;
+    width: 43px;
+    height: 47px;
+  }
+
+  &--window {
+    background: url(../img/logo-microsoft.svg) no-repeat;
+    width: 44px;
+    height: 41px;
+  }
 }
 
 .header-download__text {
   @include ff(14px, 300, 24px);
   color: #ffffff;
   text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 0;
 }
 
 @media ($tablet) {
 
+  .header-menu__item {
+
+    &::before,
+    &::after {
+      left: calc((100vw - 620px)/-2);
+    }
+  }
+
   .header-download {
-    padding-top: 60px;
+    padding: 60px 0 63px 0;
+    background-image: url("../img/iphone-hand-tablet@1x.png"), url("../img/bg-back-tablet@1x.jpg");
   }
 
   .header-download__container {
@@ -141,22 +208,35 @@
 
 @media ($desktop) {
 
+  .header {
+
+    &--index {
+      background: #000000 url(../img/bg-back-desktop@1x.jpg) 50% 0 no-repeat;
+      background-size: 2560 auto;
+    }
+  }
+
   .header .wrapper {
     display: flex;
     justify-content: space-between;
   }
 
   .header-container {
-    opacity: .3;
+    background: rgba(0, 0, 0, .3);
   }
 
-  .header-btn {
+  .header-open {
     display: none;
   }
 
   .header-menu__item {
     display: inline-block;
     padding: 0 41px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .header-menu__item:last-child {
@@ -166,6 +246,10 @@
   .header-menu__item-link {
     @include ff(18px, 400, 18px);
     text-transform: none;
+  }
+
+  .header-download {
+    background: none;
   }
 
   .header-download__title {

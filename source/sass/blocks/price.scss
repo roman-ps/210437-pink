@@ -1,25 +1,66 @@
 .price {
+  margin-top: 24px;
+  padding-top: 109px;
   background: #f2f2f2;
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 62px;
+    background: linear-gradient(175deg, #ffffff 0%,#ffffff 50%,#f2f2f2 50%,#f2f2f2 100%);
+    top: 0;
+    right: 0;
+  }
 }
 .price-table {
   display: flex;
   flex-wrap: nowrap;
-  margin-left: -553px;
+  margin-left: -555px;
 }
 
 .price-table__row {
   @include ff(14px, 400, 30px);
-  width: 280px;
+  width: 278px;
+  height: 60px;
+  padding: 15px 0 0 21px;
   box-sizing: border-box;
-  border: 2px solid #e5e5e5;
-  border-top: none;
+  border: 1px solid #e5e5e5;
   background: #ffffff;
+  text-transform: uppercase;
 
-  &--top {
+  &--top,
+  &--hit {
+    padding: 17px 0;
+    border-top: none;
     background: #283645;
     color: #ffffff;
     text-align: center;
+    height: 98px;
+  }
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      @include pseudo;
+      top: 0;
+      left: -2px;
+      width: 74px;
+      height: 73px;
+      background: url(../img/bg-hit.svg) no-repeat;
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: 'ХИТ';
+      top: 12px;
+      left: 9px;
+      transform: rotate(-45deg);
+      font-size: 14px;
+    }
   }
 
   &--empty {
@@ -35,6 +76,29 @@
 
 .price-table__row-price {
   @include ff(24px, 300, 30px);
+}
+
+.price-sliders {
+  display: flex;
+  justify-content: space-between;
+  width: 62px;
+  margin: 43px auto 47px auto;
+}
+
+.price-sliders__item {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #283645;
+  border: 3px solid #f2f2f2;
+  border-radius: 50%;
+  opacity: .3;
+
+  &--active {
+    background-color: #ffffff;
+    border: 3px solid #283645;
+    opacity: 1;
+  }
 }
 
 @media ($tablet) {

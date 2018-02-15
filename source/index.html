@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -12,8 +12,11 @@
       <div class="header-container">
         <div class="wrapper">
           <div class="header-top">
-            <a class="header-logo">PINK</a>
-            <button class="header-btn" type="button" title="Close">X</button>
+            <a class="header-logo">PINK
+              <img class="header-logo__img" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Logo">
+            </a>
+            <button class="header-close" type="button" title="Close">X</button>
+            <button class="header-open" type="button" title="Open">Open</button>
           </div>
           <nav>
             <ul class="header-menu">
@@ -32,9 +35,9 @@
             <h2 class="header-download__title">Взгляните на жизнь иначе!</h2>
             <a class="header-download__btn" href="https://www.apple.com/ru/itunes/download/">Скачать приложение</a>
             <div class="header-download__list">
-              <a class="header-download__item" href="https://www.apple.com/itunes/">Apple</a>
-              <a class="header-download__item" href="https://play.google.com/store">Android</a>
-              <a class="header-download__item" href="https://www.microsoft.com/ru-ru/store/apps">Windows</a>
+              <a class="header-download__item header-download__item--apple" href="https://www.apple.com/itunes/">Apple</a>
+              <a class="header-download__item header-download__item--android" href="https://play.google.com/store">Android</a>
+              <a class="header-download__item header-download__item--window" href="https://www.microsoft.com/ru-ru/store/apps">Windows</a>
             </div>
             <p class="header-download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
           </div>
@@ -77,8 +80,8 @@
       </div>
     </div>
 
-    <div class="wrapper">
-      <div class="review">
+    <div class="review">
+      <div class="wrapper">
         <div class="review-list">
           <div class="review-item review-item--active">
             <div class="review-item__name">Николай Петров</div>
@@ -127,7 +130,7 @@
           </div>
 
           <div class="price-table__col">
-            <div class="price-table__row price-table__row--top">
+            <div class="price-table__row price-table__row--hit">
               <div class="price-table__row-status">Стандарт</div>
               <div class="price-table__row-price">3,99 USD</div>
             </div>
@@ -160,7 +163,7 @@
         <div class="contacts-list">
           <div class="contacts-item">
             <div class="contacts-item__title">Звоните:</div>
-            <div class="contacts-item__text">+7(812)555-66-66</div>
+            <div class="contacts-item__text">+7 (812) 555-66-66</div>
           </div>
           <div class="contacts-item">
             <div class="contacts-item__title">Пишите:</div>

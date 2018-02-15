@@ -1,16 +1,41 @@
-.info-main {
-  background: #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat;
-  background-position: 50% 112%;
-  padding-bottom: 300px;
+.info {
+  padding-top: 21px;
 }
 
 .info-title {
   @include h2;
   text-align: center;
+
+  &--first {
+    margin-bottom: 31px;
+  }
 }
+
+.info-main {
+  background: #f2f2f2 url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  background-position: 50% 109%;
+  padding-bottom: 287px;
+  padding-top: 32px;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    width: 100%;
+    height: 62px;
+    background: linear-gradient(175deg, #ffffff 0%,#ffffff 50%,#f2f2f2 50%,#f2f2f2 100%);
+    top: 0;
+    right: 0;
+  }
+}
+
+.info-list {
+  padding-top: 62px;
+}
+
 
 .info-item {
   text-align: center;
+  margin-bottom: 29px;
 }
 
 .info-item__title {

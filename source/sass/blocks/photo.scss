@@ -14,6 +14,14 @@
   margin: 0 auto;
 }
 
+.photo-item--top {
+  width: 100%;
+
+  img {
+  width: 100%;
+  }
+}
+
 .photo-comment {
   background: #f2f2f2;
 }
@@ -50,6 +58,10 @@
 
   .photo-item {
     width: 300px;
+
+    &--top {
+      width: 100%;
+    }
   }
 
   .photo-comment {
