@@ -8,17 +8,23 @@
   }
 }
 
+.footer-logo {
+  font-size: 0;
+}
+
 .footer-social__item {
+  position: relative;
   display: inline-block;
   width: 51px;
   height: 51px;
   font-size: 0;
   box-sizing: border-box;
-  border: 3px solid #e9ebec;
+  border: 3px solid rgba(40, 54, 69, 0.1);
   border-radius: 50%;
 }
 
 .footer-copyright {
+  position: relative;
   @include ff(14px, 400, 18px);
   text-decoration: none;
 }
@@ -33,10 +39,6 @@
     padding: 36px 0;
   }
 
-  .footer-logo {
-    width: 147px;
-    height: 40px;
-  }
 
   .footer-social {
     display: flex;
