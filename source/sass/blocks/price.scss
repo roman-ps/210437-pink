@@ -103,20 +103,60 @@
 
 @media ($tablet) {
 
+  .price {
+    margin-top: 0px;
+    padding-bottom: 67px;
+
+    &::before {
+      background: linear-gradient(176deg, #ffffff 0%,#ffffff 50%,#f2f2f2 50%,#f2f2f2 100%);
+      height: 96px;
+    }
+  }
+
   .price-table {
     margin-left: 0;
   }
 
   .price-table__row {
     width: 155px;
+    text-transform: none;
+    height: 47px;
+    padding: 6px 0 0 15px;
+
+    &--top,
+    &--hit,
+    &--empty {
+      height: 79px;
+      padding: 12px 0 0 0;
+    }
+
+    &--hit {
+
+      &::before {
+        left: 0;
+        width: 61px;
+        height: 61px;
+        background: url(../img/bg-hit-tablet.svg) no-repeat;
+      }
+
+      &::after {
+        top: 4px;
+        left: 6px;
+      }
+    }
   }
 
   .price-table__row-status {
     @include ff(16px, 700, 30px);
+    margin-bottom: -3px;
   }
 
   .price-table__row-price {
     @include ff(18px, 300, 30px);
+  }
+
+  .price-sliders {
+    display: none;
   }
 }
 

@@ -13,6 +13,7 @@
   width: 51px;
   height: 51px;
   font-size: 0;
+  box-sizing: border-box;
   border: 3px solid #e9ebec;
   border-radius: 50%;
 }
@@ -28,6 +29,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+  }
+
+  .footer-logo {
+    width: 147px;
+    height: 40px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 19px;
+    width: 188px;
+    height: 51px;
   }
 
   .footer-copyright {

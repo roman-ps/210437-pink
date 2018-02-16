@@ -6,6 +6,15 @@
 
   .result {
     display: block;
+    padding-top: 98px;
+  }
+
+  .result .wrapper {
+    display: flex;
+  }
+
+  .result-icon {
+    width: 310px;
   }
 
   .result-container {
@@ -15,10 +24,13 @@
 
   .result-title {
     @include ff(30px, 700, 36px);
+    width: 170px;
   }
 
   .result-text {
     @include ff(14px, 400, 24px);
+    margin: 10px 0 9px 0;
+    padding-right: 10px;
   }
 
   .result-link {
