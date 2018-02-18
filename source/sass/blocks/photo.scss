@@ -48,6 +48,11 @@
   padding: 18px 0 8px 18px;
 }
 
+//.photo-comment__like--top .icon-heart {
+//  top: 0;
+//  left: 0;
+//}
+
 .photo-comment__name {
   @include ff(14px, 700, 24px);
   margin-bottom: -15px;
@@ -63,6 +68,7 @@
 }
 
 .photo-comment__like {
+  position: relative;
   @include ff(12px, 400, 24px);
   color: #d22856;
   padding-left: 31px;
@@ -149,6 +155,11 @@
       width: 140px;
       margin-bottom: -14px;
     }
+  }
+
+  .photo-comment__like--top .icon-heart {
+    top: 5px;
+    left: 108px;
   }
 
   .photo-comment__like {

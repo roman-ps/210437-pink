@@ -133,7 +133,6 @@
     width: 300px;
     box-sizing: border-box;
     padding: 0 18px 0 25px;
-    outline: 1px solid red;
     display: flex;
     flex-wrap: wrap;
   }
@@ -141,7 +140,6 @@
   .upload-filter {
     width: 202px;
     margin: 0 0 0 auto;
-//    outline: 1px solid yellow;
     margin-top: -13px;
   }
 
@@ -175,7 +173,6 @@
     align-items: flex-start;
     padding: 9px 0 25px 0;
     width: 55px;
-//    outline: 1px solid green;
   }
 
   .upload-options__item {
@@ -299,8 +296,6 @@
 
   .upload-submit {
     width: 410px;
-//    flex-direction: row;
-//    justify-content: flex-start;
     display: block;
     padding-top: 119px;
   }
