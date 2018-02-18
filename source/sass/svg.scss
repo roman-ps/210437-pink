@@ -1,0 +1,372 @@
+.icon-editor-crop,
+.icon-editor-fill,
+.icon-editor-contrast {
+  fill: #283645;
+  opacity: .3;
+}
+
+.icon-editor-crop:hover,
+.icon-editor-fill:hover,
+.icon-editor-contrast:hover {
+  fill: #283645;
+  opacity: .5;
+}
+
+.icon-editor-crop:active,
+.icon-editor-fill:active,
+.icon-editor-contrast:active {
+  fill: #d22856;
+  opacity: 1;
+}
+
+.icon-editor-crop {
+  fill: #d22856;
+  opacity: 1;
+}
+
+.icon-heart {
+  position: absolute;
+  fill: #da5b7d;
+  top: 4px;
+  left: 0;
+}
+
+.logo-pink-white-tablet,
+.logo-pink-white-desktop,
+.logo-pink-blue-desktop {
+  display: none;
+}
+
+.logo-blue {
+  fill: #283645;
+}
+
+.logo-white {
+  fill: #ffffff;
+}
+
+.logo-pink-blue-mobile {
+
+  &:hover .logo-blue {
+    fill: #D22856;
+  }
+
+  &:active .logo-blue {
+    fill: #283645;
+    opacity: .3;
+  }
+}
+
+.logo-pink-blue-mobile:active {
+  opacity: .3;
+}
+
+.logo-pink-white-mobile {
+  fill: #ffffff;
+
+  &:hover {
+    fill: #D22856;
+  }
+
+  &:active {
+    fill: #ffffff;
+    opacity: .3;
+  }
+}
+
+.icon-twitter,
+.icon-facebook,
+.icon-youtube {
+  fill: #d22856;
+  position: absolute;
+  content: '';
+}
+
+.icon-twitter {
+  top: 15px;
+  left: 14px;
+}
+
+.icon-facebook {
+  top: 12px;
+  left: 18px;
+}
+
+.icon-youtube {
+  top: 15px;
+  left: 16px;
+}
+
+.logo-htmlacademy {
+  position: absolute;
+  content: '';
+  fill: #d22856;
+  top: -8px;
+  right: 1px;
+
+  &:hover {
+    fill: #283645;
+  }
+
+  &:active {
+    fill: #283645;
+    opacity: .3;
+  }
+}
+
+.icon-yes {
+  position: absolute;
+  width: 31px;
+  height: 21px;
+  fill: #49ca50;
+  top: 20px;
+  right: 17px;
+}
+
+.icon-no {
+  position: absolute;
+  width: 27px;
+  height: 26px;
+  fill: #f25b26;
+  top: 15px;
+  right: 19px;
+}
+
+.icon-menu-cross,
+.icon-menu-burger {
+  fill: #ffffff;
+
+  &:hover {
+    fill: #d22856;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
+
+.icon-review-arrow-left,
+.icon-review-arrow-right {
+  display: none;
+}
+
+.icon-quotes {
+  fill: #efefef;
+  display: none;
+}
+
+@media ($tablet) {
+
+  .icon-editor-crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .icon-editor-fill {
+    width: 24px;
+    height: 22px;
+  }
+
+  .icon-editor-contrast {
+    width: 16px;
+    height: 16px;
+  }
+
+  .icon-heart {
+    top: 4px;
+    left: 228px;
+  }
+
+  .icon-yes {
+    top: 15px;
+    right: 58px;
+  }
+
+  .icon-no {
+    top: 12px;
+    right: 61px;
+  }
+
+  .bg-triangle-white {
+    position: absolute;
+    top: -19px;
+    left: 0;
+    width: 700px;
+  }
+
+  .icon-timer {
+    fill: #dedede;
+    width: 238px;
+    height: 276px;
+    margin-top: -37px;
+  }
+
+  .icon-editor-diagram-fill {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    fill: #d22856;
+    width: 202px;
+    height: 202px;
+  }
+
+  .icon-editor-crop,
+  .icon-editor-fill,
+  .icon-editor-contrast {
+  fill: #d22856;
+  opacity: 1;
+  }
+
+  .logo-pink-white-mobile {
+    display: none;
+  }
+
+  .logo-pink-white-tablet {
+    display: block;
+
+    &:hover .logo-white {
+      fill: #d22856;
+    }
+
+    &:active .logo-white{
+      fill: #ffffff;
+      opacity: .3;
+    }
+  }
+}
+
+@media ($desktop) {
+
+  .icon-editor-crop {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-editor-fill {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-editor-contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-pink-white-tablet {
+    display: none;
+  }
+
+  .logo-pink-blue-mobile {
+    display: none;
+  }
+
+  .logo-pink-blue-desktop {
+    display: block;
+
+    &:hover .logo-blue {
+      fill: #D22856;
+    }
+
+    &:active .logo-blue {
+      fill: #283645;
+      opacity: .3;
+    }
+  }
+
+  .logo-pink-blue-desktop:active {
+    opacity: .3;
+  }
+
+  .logo-htmlacademy {
+    top: -2px;
+  }
+
+  .icon-yes {
+    top: 18px;
+    right: 101px;
+  }
+
+  .icon-no {
+    top: 16px;
+    right: 104px;
+  }
+
+  .logo-pink-white-desktop {
+    display: block;
+
+    &:hover .logo-white {
+      fill: #d22856;
+    }
+
+    &:active .logo-white {
+      fill: #ffffff;
+    }
+  }
+
+  .logo-pink-white-desktop:active {
+    opacity: .3;
+  }
+
+  .icon-timer {
+    fill: #dedede;
+    width: 298px;
+    height: 345px;
+    margin-top: -55px;
+  }
+
+  .icon-editor-diagram-fill {
+    position: absolute;
+    top: 13px;
+    left: 21px;
+    fill: #d22856;
+    width: 253px;
+    height: 253px;
+  }
+
+  .result__icon::before {
+    position: absolute;
+    content: '24';
+    top: 41px;
+    left: 80px;
+    font-size: 120px;
+    line-height: 186px;
+    font-weight: 700;
+    color: #d22856;
+  }
+
+  .icon-quotes {
+    display: block;
+    width: 79px;
+    height: 63px;
+    margin: 0 auto;
+  }
+
+  .icon-review-arrow-left,
+  .icon-review-arrow-right {
+    position: absolute;
+    display: block;
+    fill: #000000;
+    opacity: .3;
+    width: 22px;
+    height: 42px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &:active {
+      opacity: .1;
+    }
+  }
+
+  .icon-review-arrow-left {
+    top: 138px;
+    left: 0;
+  }
+
+  .icon-review-arrow-right {
+    top: 138px;
+    right: 0;
+  }
+}

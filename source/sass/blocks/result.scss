@@ -6,6 +6,25 @@
 
   .result {
     display: block;
+    padding-top: 98px;
+  }
+
+  .result .wrapper {
+    display: flex;
+  }
+
+  .result-icon {
+    width: 310px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '24';
+      @include ff(96px, 700, 150px);
+      top: 40px;
+      left: 64px;
+      color: #d22856;
+    }
   }
 
   .result-container {
@@ -15,10 +34,13 @@
 
   .result-title {
     @include ff(30px, 700, 36px);
+    width: 170px;
   }
 
   .result-text {
     @include ff(14px, 400, 24px);
+    margin: 10px 0 9px 0;
+    padding-right: 10px;
   }
 
   .result-link {
@@ -31,19 +53,35 @@
 
   .result {
     background: #f2f2f2;
+    padding-top: 109px;
   }
 
   .result-container {
-    width: 525px;
-    margin-left: 367px;
+    width: 537px;
+    margin-left: 55px;
+    padding-bottom: 113px;
   }
 
   .result-title {
     @include ff(30px, 700, 30px);
+    width: 300px;
   }
 
   .result-text,
   .result-link {
     @include ff(18px, 400, 30px);
+  }
+
+  .result-text {
+    margin: 25px 0 30px 0;
+  }
+
+  .result-icon {
+
+    &::before {
+      @include ff(120px, 700, 186px);
+      top: 41px;
+      left: 80px;
+    }
   }
 }
