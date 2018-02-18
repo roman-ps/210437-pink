@@ -1,3 +1,7 @@
+.upload {
+  padding-top: 23px;
+}
+
 .upload-form {
   background: #f2f2f2;
 }
@@ -5,41 +9,40 @@
 .upload-top {
   @include ff(14px, 400, 30px);
   text-align: center;
+  margin-bottom: 42px;
 }
 
 .upload-form .wrapper {
   padding-top: 20px;
 }
 
+.upload-img {
+  margin-left: -2px;
+  margin-bottom: 37px;
+}
+
 .upload-options {
   display: flex;
-  justify-content: space-around;
+  padding: 0 46px 0 34px;
+  justify-content: space-between;
   align-items: center;
 }
 
 .upload-options__item {
   display: block;
-
-  &--contrast {
-    width: 44px;
-    height: 44px;
-  }
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 0;
 
   &--bright {
-    width: 48px;
-    height: 43px;
-  }
-
-  &--temperature {
-    width: 33px;
-    height: 33px;
+    margin-left: -9px;
   }
 }
 
 .upload-filter {
-  margin: 0 auto;
+  margin: 2px auto 0 auto;
   width: 240px;
-
 }
 
 .upload-filter__item {
@@ -66,24 +69,40 @@
     border: 2px solid #d22856;
     border-radius: 10px;
     top: 28px;
-    right: 20px;
+    right: 35px;
   }
 }
 
 .upload-submit {
   display: flex;
   flex-direction: column;
+  padding-top: 41px;
+  position: relative;
+  margin-left: -3px;
+
+  &::before {
+    @include pseudo;
+    width: 320px;
+    height: 1px;
+    background: #dddfe0;
+    top: 0;
+    left: -20px;
+  }
 }
 
 .upload-submit__item {
   @include ff(18px, 700, 18px);
+  font-family: $fonts;
   border-radius: 35px;
-  padding: 14px 0 17px 0;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  width: 280px;
 
   &--post {
     border: 3px solid #d22856;
     color: #d22856;
     margin-bottom: 12px;
+    background-color: #f2f2f2;
   }
 
   &--cansel {
@@ -95,8 +114,13 @@
 
 @media ($tablet) {
 
+  .upload {
+    padding-top: 44px;
+  }
+
   .upload-top {
     @include ff(18px, 400, 30px);
+    margin-bottom: 69px;
   }
 
   .upload-form .wrapper {
@@ -117,39 +141,178 @@
   .upload-filter {
     width: 202px;
     margin: 0 0 0 auto;
-    outline: 1px solid yellow;
+//    outline: 1px solid yellow;
+    margin-top: -13px;
   }
 
   .upload-filter__item {
     display: block;
+
+    &--active {
+
+      &::after {
+        right: 42px;
+      }
+    }
+
+    &--second {
+
+      &::after {
+        right: 163px;
+      }
+    }
+
+    &--third {
+
+      &::after {
+        right: 93px;
+      }
+    }
   }
 
   .upload-options {
     flex-direction: column;
-    outline: 1px solid green;
-    flex-grow: 1;
+    align-items: flex-start;
+    padding: 9px 0 25px 0;
+    width: 55px;
+//    outline: 1px solid green;
+  }
+
+  .upload-options__item {
+
+    &--contrast {
+      margin-left: 2px;
+    }
+
+    &--bright {
+      margin-left: 3px;
+      margin-top: 8px;
+    }
+
+    &--temperature {
+      margin-left: 8px;
+    }
   }
 
   .upload-submit {
     width: 100%;
-    margin-top: 68px;
+    margin-top: 30px;
+    width: 260px;
+    margin-left: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .upload-submit__item {
+
+    width: 260px;
 
     &--post {
     margin-bottom: 24px;
     }
 
     &--cansel {
-      margin-bottom: 54px;
+      margin-bottom: 52px;
     }
   }
 }
 
 @media ($desktop) {
 
+  .upload {
+    padding-top: 5px;
+  }
+
+  .upload-top {
+    margin-bottom: 67px;
+  }
+
   .upload-container {
     width: 410px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 50px;
+    margin-top: -2px;
+  }
+
+  .upload-form {
+    background: #ffffff;
+  }
+
+  .upload-form .wrapper {
+    background: #f2f2f2;
+    width: 940px;
+  }
+
+  .upload-img {
+    padding-left: 71px;
+    margin-bottom: 53px;
+  }
+
+  .upload-options {
+    padding: 0px 0px 51px 1px;
+    margin-top: -4px;
+    margin-left: -4px;
+    box-sizing: border-box;
+    height: 200px;
+    padding-bottom: 16px;
+  }
+
+  .upload-options__item {
+
+    &--bright {
+      margin-top: 0;
+    }
+  }
+
+  .upload-filter {
+    padding-right: 30px;
+    width: 288px;
+  }
+
+  .upload-filter__item {
+    display: block;
+
+    &--active {
+
+      &::after {
+        right: 203px;
+      }
+    }
+
+    &--second {
+
+      &::after {
+        right: 27px;
+      }
+    }
+
+    &--third {
+
+      &::after {
+        right: 115px;
+      }
+    }
+  }
+
+  .upload-submit {
+    width: 410px;
+//    flex-direction: row;
+//    justify-content: flex-start;
+    display: block;
+    padding-top: 119px;
+  }
+
+  .upload-submit__item {
+    width: auto;
+    box-sizing: border-box;
+    width: 185px;
+
+    &--post {
+      margin-left: 0px;
+      margin-right: 35px;
+    }
   }
 }

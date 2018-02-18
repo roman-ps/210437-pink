@@ -15,6 +15,16 @@
 
   .result-icon {
     width: 310px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '24';
+      @include ff(96px, 700, 150px);
+      top: 40px;
+      left: 64px;
+      color: #d22856;
+    }
   }
 
   .result-container {
@@ -64,5 +74,14 @@
 
   .result-text {
     margin: 25px 0 30px 0;
+  }
+
+  .result-icon {
+
+    &::before {
+      @include ff(120px, 700, 186px);
+      top: 41px;
+      left: 80px;
+    }
   }
 }
