@@ -14,10 +14,23 @@
   }
 }
 
+.wrapper--form {
+
+  @media ($tablet) {
+    width: 620px;
+  }
+
+  @media ($desktop) {
+    width: 940px;
+  }
+}
+
 .wrapper-mini {
 
   @media ($desktop) {
     width: 435px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

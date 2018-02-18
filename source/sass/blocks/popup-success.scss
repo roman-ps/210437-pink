@@ -1,4 +1,4 @@
-.popup {
+.popup-success {
   @include ff(18px, 700, 24px);
   background: #ffffff;
   display: none;
@@ -9,21 +9,30 @@
   padding-top: 25px;
   position: fixed;
   text-align: center;
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .15);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .35);
 }
 
-.popup-title {
+.popup-success__head {
   margin-bottom: 30px;
 }
 
-.popup-text {
-  padding: 0 20px;
+.popup-success__text {
+  padding: 0 25px;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 30px;
 }
 
-.popup-btn {
+.popup-success__btn {
+  height: 163px;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 48px;
+}
+
+.popup-success__btn-close {
   width: 280px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -32,25 +41,38 @@
   border: none;
   border-radius: 2px;
   padding: 16px 45px 16px 45px;
-  margin-bottom: 42px;
-  font-size: 18px;
-  line-height: 30px;
+  margin-bottom: 22px;
 }
 
 @media ($tablet) {
 
-  .popup {
+  .popup-success {
     width: 460px;
   }
 
-  .popup-title {
+  .popup-success__title {
     font-size: 30px;
     line-height: 40px;
     padding: 0 71px;
   }
 
-  .popup-text {
+  .popup-success__text {
     font-size: 18px;
     padding: 0 71px;
+  }
+}
+
+@media ($desktop) {
+
+  .popup-success {
+    width: 780px;
+  }
+
+  .popup-success__text {
+    padding: 0 190px;
+  }
+
+  .popup-success__btn-close {
+    width: 460px;
   }
 }

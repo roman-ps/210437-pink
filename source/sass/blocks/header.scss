@@ -88,6 +88,10 @@
   }
 }
 
+.header--form .header-bg {
+  padding-bottom: 56px;
+}
+
 .header-text {
   @include h2;
   margin: 0 auto;
@@ -270,6 +274,10 @@
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
+
+  .header--form .header-bg {
+    padding-bottom: 79px;
+  }
 }
 
 @media ($desktop) {
@@ -277,7 +285,7 @@
   .header {
 
     &--index {
-      background-image: url(../img/bg-back-desktop@1x.jpg);
+      background-image: url("../img/bg-back-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: 50% 0%;
       background-size: 2560px auto;
@@ -288,12 +296,17 @@
       }
     }
 
-    &--photo {
+    &--photo,
+    &--form {
       background-image: url(../img/bg-back-desktop@1x.jpg);
       background-repeat: no-repeat;
       background-position: 50% 0%;
       background-size: 2560px auto;
       background-color: #1d2631;
+
+      @media #{$retina} {
+        background-image: url("../img/bg-back-desktop@2x.jpg");
+      }
     }
   }
 
@@ -381,5 +394,9 @@
     background: none;
     padding-top: 67px;
     padding-bottom: 99px;
+  }
+
+  .header--form .header-bg {
+    padding-bottom: 98px;
   }
 }
