@@ -2,33 +2,33 @@
   padding-top: 23px;
 }
 
-.upload-form {
+.upload__form {
   background: #f2f2f2;
 }
 
-.upload-top {
+.upload__top {
   @include ff(14px, 400, 30px);
   text-align: center;
   margin-bottom: 42px;
 }
 
-.upload-form .wrapper {
+.upload__form .wrapper {
   padding-top: 20px;
 }
 
-.upload-img {
+.upload__img {
   margin-left: -2px;
   margin-bottom: 37px;
 }
 
-.upload-options {
+.upload__options {
   display: flex;
   padding: 0 46px 0 34px;
   justify-content: space-between;
   align-items: center;
 }
 
-.upload-options__item {
+.upload__options-item {
   display: block;
   padding: 0;
   border: none;
@@ -40,12 +40,12 @@
   }
 }
 
-.upload-filter {
+.upload__filter {
   margin: 2px auto 0 auto;
   width: 240px;
 }
 
-.upload-filter__item {
+.upload__filter-item {
   position: relative;
   display: none;
   padding: 35px 0;
@@ -70,10 +70,15 @@
     border-radius: 10px;
     top: 28px;
     right: 35px;
+    cursor: pointer;
   }
 }
 
-.upload-submit {
+.upload__filter-item:active::after {
+  background-color: #d22856;
+}
+
+.upload__submit {
   display: flex;
   flex-direction: column;
   padding-top: 41px;
@@ -90,7 +95,7 @@
   }
 }
 
-.upload-submit__item {
+.upload__submit-item {
   @include ff(18px, 700, 18px);
   font-family: $fonts;
   border-radius: 35px;
@@ -103,12 +108,30 @@
     color: #d22856;
     margin-bottom: 12px;
     background-color: #f2f2f2;
+
+    &:hover {
+      color: #ffffff;
+      background-color: #d22856;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, .3);
+      }
   }
 
   &--cansel {
     border: 3px solid #000000;
     opacity: 0.1;
     margin-bottom: 41px;
+
+    &:hover {
+      opacity: .3;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #000000;
+    }
   }
 }
 
@@ -118,18 +141,18 @@
     padding-top: 44px;
   }
 
-  .upload-top {
+  .upload__top {
     @include ff(18px, 400, 30px);
     margin-bottom: 69px;
   }
 
-  .upload-form .wrapper {
+  .upload__form .wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 57px;
   }
 
-  .upload-container {
+  .upload__container {
     width: 300px;
     box-sizing: border-box;
     padding: 0 18px 0 25px;
@@ -137,13 +160,13 @@
     flex-wrap: wrap;
   }
 
-  .upload-filter {
+  .upload__filter {
     width: 202px;
     margin: 0 0 0 auto;
     margin-top: -13px;
   }
 
-  .upload-filter__item {
+  .upload__filter-item {
     display: block;
 
     &--active {
@@ -168,14 +191,14 @@
     }
   }
 
-  .upload-options {
+  .upload__options {
     flex-direction: column;
     align-items: flex-start;
     padding: 9px 0 25px 0;
     width: 55px;
   }
 
-  .upload-options__item {
+  .upload__options-item {
 
     &--contrast {
       margin-left: 2px;
@@ -191,7 +214,7 @@
     }
   }
 
-  .upload-submit {
+  .upload__submit {
     width: 100%;
     margin-top: 30px;
     width: 260px;
@@ -202,7 +225,7 @@
     }
   }
 
-  .upload-submit__item {
+  .upload__submit-item {
 
     width: 260px;
 
@@ -222,11 +245,11 @@
     padding-top: 5px;
   }
 
-  .upload-top {
+  .upload__top {
     margin-bottom: 67px;
   }
 
-  .upload-container {
+  .upload__container {
     width: 410px;
     padding-right: 0;
     padding-left: 0;
@@ -234,21 +257,21 @@
     margin-top: -2px;
   }
 
-  .upload-form {
+  .upload__form {
     background: #ffffff;
   }
 
-  .upload-form .wrapper {
+  .upload__form .wrapper {
     background: #f2f2f2;
     width: 940px;
   }
 
-  .upload-img {
+  .upload__img {
     padding-left: 71px;
     margin-bottom: 53px;
   }
 
-  .upload-options {
+  .upload__options {
     padding: 0px 0px 51px 1px;
     margin-top: -4px;
     margin-left: -4px;
@@ -257,19 +280,19 @@
     padding-bottom: 16px;
   }
 
-  .upload-options__item {
+  .upload__options-item {
 
     &--bright {
       margin-top: 0;
     }
   }
 
-  .upload-filter {
+  .upload__filter {
     padding-right: 30px;
     width: 288px;
   }
 
-  .upload-filter__item {
+  .upload__filter-item {
     display: block;
 
     &--active {
@@ -294,13 +317,13 @@
     }
   }
 
-  .upload-submit {
+  .upload__submit {
     width: 410px;
     display: block;
     padding-top: 119px;
   }
 
-  .upload-submit__item {
+  .upload__submit-item {
     width: auto;
     box-sizing: border-box;
     width: 185px;

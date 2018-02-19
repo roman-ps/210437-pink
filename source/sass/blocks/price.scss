@@ -14,13 +14,13 @@
     right: 0;
   }
 }
-.price-table {
+.price__table {
   display: flex;
   flex-wrap: nowrap;
   margin-left: -555px;
 }
 
-.price-table__row {
+.price__table-row {
   position: relative;
   @include ff(14px, 400, 30px);
   width: 278px;
@@ -68,26 +68,25 @@
     background: #f2f2f2;
     border: 2px solid transparent;
   }
-
 }
 
-.price-table__row-status {
+.price__table-status {
   @include ff(18px, 700, 30px);
   text-transform: uppercase;
 }
 
-.price-table__row-price {
+.price__table-price {
   @include ff(24px, 300, 30px);
 }
 
-.price-sliders {
+.price__sliders {
   display: flex;
   justify-content: space-between;
   width: 62px;
   margin: 43px auto 47px auto;
 }
 
-.price-sliders__item {
+.price__sliders-item {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -95,6 +94,15 @@
   border: 3px solid #f2f2f2;
   border-radius: 50%;
   opacity: .3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .1;
+  }
 
   &--active {
     background-color: #ffffff;
@@ -115,11 +123,11 @@
     }
   }
 
-  .price-table {
+  .price__table {
     margin-left: 0;
   }
 
-  .price-table__row {
+  .price__table-row {
     width: 155px;
     text-transform: none;
     height: 47px;
@@ -160,16 +168,16 @@
     }
   }
 
-  .price-table__row-status {
+  .price__table-status {
     @include ff(16px, 700, 30px);
     margin-bottom: -3px;
   }
 
-  .price-table__row-price {
+  .price__table-price {
     @include ff(18px, 300, 30px);
   }
 
-  .price-sliders {
+  .price__sliders {
     display: none;
   }
 }
@@ -180,12 +188,12 @@
     padding-bottom: 96px;
   }
 
-  .price-table {
+  .price__table {
     margin-top: 46px;
     margin-left: -2px;
   }
 
-  .price-table__row {
+  .price__table-row {
     width: 236px;
     @include ff(18px, 400, 30px);
     height: 60px;
@@ -199,7 +207,7 @@
     }
   }
 
-  .price-table__row--hit {
+  .price__table-row--hit {
     &::before {
       top: 0;
       left: 0;
@@ -214,12 +222,12 @@
     }
   }
 
-  .price-table__row-status {
+  .price__table-status {
     @include ff(18px, 700, 30px);
     margin-bottom: 0;
   }
 
-  .price-table__row-price {
+  .price__table-price {
     @include ff(24px, 300, 30px);
   }
 }

@@ -3,7 +3,7 @@
   padding-bottom: 16px;
 }
 
-.form-title {
+.form__title {
   @include ff(14px, 400, 30px);
   width: 275px;
   margin: 0 auto;
@@ -11,19 +11,19 @@
   margin-bottom: 34px;
 }
 
-.form-subtitle {
+.form__subtitle {
   display: none;
 }
 
-.form-user {
+.form__user {
   margin-bottom: 43px;
 }
 
-.form-user__item {
+.form__user-item {
   margin-bottom: 20px;
 }
 
-.form-user__item label {
+.form__user-item label {
   display: block;
   @include ff(14px, 400, 30px);
   color: #d22856;
@@ -32,7 +32,7 @@
   margin-bottom: 5px;
 }
 
-.form-user__item input {
+.form__user-item input {
   @include ff(18px, 400, 24px);
   outline: 0;
   width: 255px;
@@ -40,12 +40,12 @@
   border: 2px solid #e5e5e5;
 }
 
-.form-progress {
+.form__progress {
   background: #f2f2f2;
   padding: 25px 0 1px 0;
 }
 
-.form-progress__title {
+.form__progress-title {
   @include ff(14px, 400, 18px);
   width: 220px;
   text-align: center;
@@ -55,19 +55,19 @@
   text-transform: uppercase;
 }
 
-.form-progress__item {
+.form__progress-item {
   @include ff(18px, 400, 30px);
   position: relative;
   padding: 5px 0 4px 70px;
   margin-bottom: 43px;
 }
 
-.form-contact {
+.form__contact {
   padding-top: 32px;
   padding-bottom: 25px;
 }
 
-.form-contact__title {
+.form__contact-title {
   display: none;
   @include ff(14px, 400, 30px);
   text-align: center;
@@ -75,11 +75,11 @@
   text-transform: uppercase;
 }
 
-.form-contact__item {
+.form__contact-item {
   margin-bottom: 20px;
 }
 
-.form-contact__item label {
+.form__contact-item label {
   @include ff(14px, 400, 30px);
   color: #d22856;
   text-transform: uppercase;
@@ -88,7 +88,7 @@
   margin-bottom: 4px;
 }
 
-.form-contact__item input {
+.form__contact-item input {
   @include ff(18px, 400, 30px);
   width: 255px;
   outline: 0;
@@ -96,13 +96,13 @@
   border: 2px solid #e5e5e5;
 }
 
-.form-app {
+.form__app {
   background: #f2f2f2;
   padding-top: 24px;
   padding-bottom: 7px;
 }
 
-.form-app__title {
+.form__app-title {
   @include ff(14px, 400, 18px);
   text-align: center;
   color: #d22856;
@@ -111,17 +111,17 @@
   padding-bottom: 36px;
 }
 
-.form-app__item {
+.form__app-item {
   @include ff(18px, 400, 30px);
   margin-bottom: 36px;
   padding: 4px 0 4px 70px;
 }
 
-.form-result {
+.form__result {
   padding-top: 32px;
 }
 
-.form-result__title {
+.form__result-title {
   @include ff(14px, 400, 30px);
   text-align: center;
   text-transform: uppercase;
@@ -129,7 +129,7 @@
   margin-bottom: 11px;
 }
 
-.form-result__text {
+.form__result-text {
   @include ff(18px, 400, 30px);
   width: 100%;
   height: 200px;
@@ -141,7 +141,7 @@
   margin-bottom: 46px;
 }
 
-.form-submit__btn {
+.form__submit-btn {
   font-family: $fonts;
   @include ff(18px, 700, 30px);
   width: 100%;
@@ -152,41 +152,50 @@
   border: none;
   border-radius: 2px;
   margin-bottom: 36px;
+
+  &:hover {
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    background-color: #1c9b5e;
+    color: rgba(255, 255, 255, .3);
+  }
 }
 
-.form-submit__required {
+.form__submit-required {
   @include ff(14px, 400, 30px);
   text-align: center;
   text-transform: uppercase;
 }
 
-.form-submit__sign {
+.form__submit-sign {
   color: #d22856;
 }
 
-.form-submit__hide {
+.form__submit-hide {
   display: none;
 }
 
-input,
-textarea {
+.form input,
+.form__result-text {
   font-family: $fonts;
   outline: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.form input[type="checkbox"],
+.form input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] + label,
-input[type="radio"] + label {
+.form input[type="checkbox"] + label,
+.form input[type="radio"] + label {
   display: block;
   position: relative;
   cursor: pointer;
 }
 
-input[type="checkbox"] + label::before {
+.form input[type="checkbox"] + label::before {
   @include pseudo;
   width: 35px;
   height: 35px;
@@ -196,7 +205,7 @@ input[type="checkbox"] + label::before {
   left: -70px;
 }
 
-input[type="radio"] + label::before {
+.form input[type="radio"] + label::before {
   @include pseudo;
   width: 36px;
   height: 36px;
@@ -207,7 +216,7 @@ input[type="radio"] + label::before {
   left: -70px;
 }
 
-input[type="checkbox"]:checked + label::after {
+.form input[type="checkbox"]:checked + label::after {
   @include pseudo;
   background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
@@ -217,7 +226,7 @@ input[type="checkbox"]:checked + label::after {
   left: -60px;
 }
 
-input[type="radio"]:checked + label::after {
+.form input[type="radio"]:checked + label::after {
   @include pseudo;
   background-image: url("../img/icon-map-marker.svg");
   background-repeat: no-repeat;
@@ -227,22 +236,22 @@ input[type="radio"]:checked + label::after {
   left: -68px;
 }
 
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus {
+.form input[type="text"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="email"]:focus {
   border: 2px solid #d22856;
 }
 
-input[type="checkbox"]:hover + label:before,
-input[type="radio"]:hover + label:before,
-input[type="text"]:hover,
-input[type="tel"]:hover,
-input[type="email"]:hover {
+.form input[type="checkbox"]:hover + label:before,
+.form input[type="radio"]:hover + label:before,
+.form input[type="text"]:hover,
+.form input[type="tel"]:hover,
+.form input[type="email"]:hover {
   border: 2px solid #283645;
 }
 
-input[type="checkbox"]:active + label:before,
-input[type="radio"]:active + label:before {
+.form input[type="checkbox"]:active + label:before,
+.form input[type="radio"]:active + label:before {
   border: 2px solid #d22856;
 }
 
@@ -253,18 +262,18 @@ input[type="radio"]:active + label:before {
     padding-bottom: 50px;
   }
 
-  .form-container {
+  .form__container {
     display: flex;
     flex-direction: column;
   }
 
-  .form-user {
+  .form__user {
     order: 0;
     margin-bottom: 0;
     padding-top: 40px;
   }
 
-  .form-progress {
+  .form__progress {
     order: 4;
     background: #ffffff;
     padding-top: 51px;
@@ -277,11 +286,11 @@ input[type="radio"]:active + label:before {
     margin-bottom: 66px;
   }
 
-  .form-contact {
+  .form__contact {
     order: 3;
   }
 
-  .form-app {
+  .form__app {
     order: 1;
     background: #ffffff;
     border: 2px solid #e6e6e6;
@@ -293,84 +302,84 @@ input[type="radio"]:active + label:before {
     padding-bottom: 20px;
   }
 
-  .form-app__item {
+  .form__app-item {
     margin-left: 29px;
   }
 
-  input[type="radio"] + label::before {
+  .form input[type="radio"] + label::before {
     top: -5px;
     left: -60px;
   }
 
-  input[type="radio"]:checked + label::after {
+  .form input[type="radio"]:checked + label::after {
     top: -3px;
     left: -58px;
   }
 
-  .form-result {
+  .form__result {
     order: 5;
     width: 620px;
     margin: 0 auto;
     border: 2px solid #e6e6e6;
   }
 
-  .form-submit {
+  .form__submit {
     order: 6;
   }
 
-  .form-title {
+  .form__title {
     width: 490px;
     @include ff(18px, 400, 30px);
   }
 
-  .form-subtitle {
+  .form__subtitle {
     display: block;
   }
 
-  .form-app__list,
-  .form-progress__list {
+  .form__app-list,
+  .form__progress-list {
     margin: 0 auto;
   }
 
-  .form-submit .wrapper {
+  .form__submit .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  .form-submit__btn {
+  .form__submit-btn {
     width: 300px;
     margin-bottom: 0;
   }
 
-  .form-user__item {
+  .form__user-item {
     display: flex;
     flex-direction: row;
     margin-bottom: 55px;
     align-items: baseline;
   }
 
-  .form-user__item input {
+  .form__user-item input {
     flex-grow: 1;
     border: 2px solid #e5e5e5;
     padding: 16px 0 16px 19px;
   }
 
-  .form-user__item label {
+  .form__user-item label {
     margin-right: 20px;
     padding-left: 0;
   }
 
-  .form-contact,
-  .form-progress,
-  .form-result {
+  .form__contact,
+  .form__progress,
+  .form__result {
     position: relative;
   }
 
-  .form-app__title,
-  .form-contact__title,
-  .form-progress__title,
-  .form-result__title {
+  .form__app-title,
+  .form__contact-title,
+  .form__progress-title,
+  .form__result-title {
     @include pseudo;
     padding: 0 10px;
     top: -10px;
@@ -381,35 +390,35 @@ input[type="radio"]:active + label:before {
     width: auto;
   }
 
-  .form-contact__title {
+  .form__contact-title {
     top: -16px;
   }
 
-  .form-progress__title {
+  .form__progress-title {
     top: -22px;
   }
 
-  .form-result__title {
+  .form__result-title {
     top: -17px;
   }
 
-  .form-progress__item {
+  .form__progress-item {
     padding-left: 99px;
   }
 
-  input[type="checkbox"] + label::before {
+  .form input[type="checkbox"] + label::before {
     left: -60px;
   }
 
-  input[type="checkbox"]:checked + label::before {
+  .form input[type="checkbox"]:checked + label::before {
     left: -60px;
   }
 
-  input[type="checkbox"]:checked + label::after {
+  .form input[type="checkbox"]:checked + label::after {
     left: -50px;
   }
 
-  .form-contact {
+  .form__contact {
     margin: 0 auto;
     margin-top: 66px;
     border: 2px solid #e6e6e6;
@@ -417,13 +426,13 @@ input[type="radio"]:active + label:before {
     padding-bottom: 0;
   }
 
-  .form-contact__container {
+  .form__contact-container {
     padding-left: 39px;
     padding-right: 40px;
     padding-top: 14px;
   }
 
-  .form-contact__item {
+  .form__contact-item {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -433,10 +442,10 @@ input[type="radio"]:active + label:before {
     &::before {
       @include pseudo;
       background: #e5e5e5;
-      top: 0;
-      right: 0;
+      top: 2px;
+      right: 2px;
       width: 62px;
-      height: 59px;
+      height: 57px;
     }
 
     &::after {
@@ -444,7 +453,7 @@ input[type="radio"]:active + label:before {
     }
   }
 
-  .form-contact__item:nth-child(1) {
+  .form__contact-item:nth-child(1) {
 
     &::after {
       width: 20px;
@@ -455,7 +464,7 @@ input[type="radio"]:active + label:before {
     }
   }
 
-  .form-contact__item:nth-child(2) {
+  .form__contact-item:nth-child(2) {
 
     &::after {
       width: 18px;
@@ -466,28 +475,28 @@ input[type="radio"]:active + label:before {
     }
   }
 
-  .form-contact__item label {
+  .form__contact-item label {
     order: 1;
     padding-left: 20px;
     padding-top: 11px;
   }
 
-  .form-contact__item input {
+  .form__contact-item input {
     order: 0;
     padding-left: 20px;
     width: auto;
   }
 
-  .form-progress__title {
+  .form__progress-title {
     white-space: nowrap;
   }
 
-  .form-result {
+  .form__result {
     padding-top: 43px;
     margin-bottom: 68px;
   }
 
-  .form-result__text {
+  .form__result-text {
     display: block;
     margin: 0 auto;
     width: 500px;
@@ -496,7 +505,6 @@ input[type="radio"]:active + label:before {
   }
 }
 
-
 @media ($desktop) {
 
   .form {
@@ -504,15 +512,15 @@ input[type="radio"]:active + label:before {
     margin-bottom: -31px;
   }
 
-  .form-title {
+  .form__title {
     width: 760px;
   }
 
-  .form-subtitle {
+  .form__subtitle {
     display: inline-block;
   }
 
-  .form-container {
+  .form__container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 940px;
@@ -520,34 +528,34 @@ input[type="radio"]:active + label:before {
     justify-content: space-between;
   }
 
-  .form-user {
+  .form__user {
     padding-top: 0;
     margin-top: 53px;
   }
 
-  .form-user__item:nth-child(3) {
+  .form__user-item:nth-child(3) {
     margin-bottom: 0;
   }
 
-  .form-app {
+  .form__app {
     width: 435px;
     margin: 46px 0 0 auto;
   }
 
-  .form-app__item {
+  .form__app-item {
     margin-left: 68px;
   }
 
-  .form-app__list {
+  .form__app-list {
     padding-top: 4px;
   }
 
-  .form-progress {
+  .form__progress {
     width: 936px;
     padding-bottom: 13px;
   }
 
-  .form-progress__list {
+  .form__progress-list {
     width: 820px;
     display: flex;
     flex-wrap: wrap;
@@ -555,69 +563,69 @@ input[type="radio"]:active + label:before {
     margin-left: 109px;
   }
 
-  .form-progress__item {
+  .form__progress-item {
     width: 260px;
     padding-left: 0px;
   }
 
-  .form-progress__item:nth-child(1),
-  .form-progress__item:nth-child(2) {
+  .form__progress-item:nth-child(1),
+  .form__progress-item:nth-child(2) {
     width: 260px;
   }
 
-  .form-progress__item:nth-child(3),
-  .form-progress__item:nth-child(4) {
+  .form__progress-item:nth-child(3),
+  .form__progress-item:nth-child(4) {
     width: 246px;
   }
 
-  .form-progress__item:nth-child(5),
-  .form-progress__item:nth-child(6) {
+  .form__progress-item:nth-child(5),
+  .form__progress-item:nth-child(6) {
     width: 210px;
   }
 
-  .form-progress__item:nth-child(1) {
+  .form__progress-item:nth-child(1) {
     order: 1;
   }
 
-  .form-progress__item:nth-child(2) {
+  .form__progress-item:nth-child(2) {
     order: 4;
   }
 
-  .form-progress__item:nth-child(3) {
+  .form__progress-item:nth-child(3) {
     order: 2;
   }
 
-  .form-progress__item:nth-child(4) {
+  .form__progress-item:nth-child(4) {
     order: 5;
   }
 
-  .form-progress__item:nth-child(5) {
+  .form__progress-item:nth-child(5) {
     order: 3;
   }
 
-  .form-progress__item:nth-child(6) {
+  .form__progress-item:nth-child(6) {
     order: 6;
   }
 
-  .form-result {
+  .form__result {
     width: 936px;
     padding-top: 39px;
   }
 
-  .form-result__text {
+  .form__result-text {
     width: 820px;
     padding-left: 16px;
     height: 130px;
     margin-bottom: 42px;
   }
 
-  .form-contact {
+  .form__contact {
     width: 936px;
     margin-top: 64px;
     padding-top: 29px;
   }
 
-  .form-contact__container {
+  .form__contact-container {
     width: 820px;
     margin: 0 auto;
     display: flex;
@@ -625,31 +633,31 @@ input[type="radio"]:active + label:before {
     padding: 14px 0 0 0;
   }
 
-  .form-contact__item {
+  .form__contact-item {
     width: 374px;
     margin: 0 0 14px 0;
   }
 
-  .form-contact__item input,
-  .form-contact__item label {
+  .form__contact-item input,
+  .form__contact-item label {
     padding-left: 17px;
     margin-bottom: 0;
   }
 
-  .form-submit {
+  .form__submit {
     width: 940px;
   }
 
-  .form-submit .wrapper {
+  .form__submit .wrapper {
     width: 940px;
     padding: 0 0;
   }
 
-  .form-submit__required {
+  .form__submit-required {
     text-align: left;
   }
 
-  .form-submit__hide {
+  .form__submit-hide {
     display: inline-block;
   }
 }

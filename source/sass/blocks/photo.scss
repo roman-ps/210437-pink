@@ -2,14 +2,14 @@
   padding-top: 45px;
 }
 
-.photo-title {
+.photo__title {
   @include ff(14px, 400, 30px);
   text-align: center;
   width: 245px;
   margin: 0 auto 49px auto;
 }
 
-.photo-item {
+.photo__item {
   margin-bottom: 20px;
 }
 
@@ -18,11 +18,11 @@
   display: block;
 }
 
-.photo-item a {
+.photo__item a {
   display: block;
 }
 
-.photo-item--top {
+.photo__item--top {
   width: 100%;
   position: relative;
 
@@ -43,36 +43,42 @@
   }
 }
 
-.photo-comment {
+.photo__comment {
   background: #f2f2f2;
   padding: 18px 0 8px 18px;
 }
 
-//.photo-comment__like--top .icon-heart {
-//  top: 0;
-//  left: 0;
-//}
-
-.photo-comment__name {
+.photo__comment-name {
   @include ff(14px, 700, 24px);
   margin-bottom: -15px;
 }
 
-.photo-comment__time {
+.photo__comment-time {
   @include ff(12px, 300, 24px);
 }
 
-.photo-comment__quote {
+.photo__comment-quote {
   @include ff(14px, 400, 24px);
   margin-bottom: 10px;
 }
 
-.photo-comment__like {
+.photo__comment-like {
   position: relative;
   @include ff(12px, 400, 24px);
   color: #d22856;
   padding-left: 31px;
   margin-bottom: 12px;
+  position: relative;
+}
+
+.photo__comment-like::before {
+  @include pseudo;
+  background: transparent url("../img/icon-heart.svg") no-repeat;
+  width: 13px;
+  height: 12px;
+  top: 4px;
+  left: 0;
+  cursor: pointer;
 }
 
 @media ($tablet) {
@@ -81,13 +87,13 @@
     padding-top: 92px;
   }
 
-  .photo-title {
+  .photo__title {
     @include ff(18px, 400, 30px);
     width: 440px;
     margin-bottom: 77px;
   }
 
-  .photo-item--top {
+  .photo__item--top {
 
     img {
       height: 509px;
@@ -105,7 +111,7 @@
     flex-wrap: wrap;
   }
 
-  .photo-item {
+  .photo__item {
     width: 300px;
 
     &--top {
@@ -114,7 +120,7 @@
     }
   }
 
-  .photo-comment {
+  .photo__comment {
     display: flex;
     flex-direction: column;
     padding: 25px 8px 12px 28px;
@@ -127,7 +133,7 @@
     }
   }
 
-  .photo-comment__name {
+  .photo__comment-name {
 
     &--top {
       order: 1;
@@ -136,7 +142,7 @@
     }
   }
 
-  .photo-comment__quote {
+  .photo__comment-quote {
     min-height: 48px;
 
     &--top {
@@ -147,7 +153,7 @@
     }
   }
 
-  .photo-comment__like {
+  .photo__comment-like {
     align-items: flex-end;
 
     &--top {
@@ -157,24 +163,29 @@
     }
   }
 
-  .photo-comment__like--top .icon-heart {
+  .photo__comment-like::before {
+    top: 4px;
+    left: 228px;
+  }
+
+  .photo__comment-like--top::before {
     top: 5px;
     left: 108px;
   }
 
-  .photo-comment__like {
+  .photo__comment-like {
     padding-left: 0;
   }
 }
 
 @media ($desktop) {
 
-  .photo-title {
+  .photo__title {
     width: 573px;
     margin-bottom: 87px;
   }
 
-  .photo-item--top {
+  .photo__item--top {
 
     img {
       height: 506px;
@@ -185,26 +196,26 @@
     }
   }
 
-  .photo-comment--top {
+  .photo__comment--top {
     flex-wrap: wrap;
     padding-bottom: 25px;
     padding-bottom: 0;
   }
 
-  .photo-comment__like--top {
+  .photo__comment-like--top {
     width: 144px;
   }
 
-  .photo-comment__quote--top {
+  .photo__comment-quote--top {
     width: 100%;
     margin-bottom: 0;
   }
 
-  .photo-item {
+  .photo__item {
     margin-bottom: 55px;
   }
 
-  .photo-item--top {
+  .photo__item--top {
     margin-bottom: 50px;
   }
 }

@@ -2,7 +2,7 @@
   padding-top: 42px;
 }
 
-.review-item {
+.review__item {
   display: none;
   text-align: center;
 
@@ -12,26 +12,26 @@
   }
 }
 
-.review-item__status {
+.review__item-status {
   display: none;
 }
 
-.review-item__name {
+.review__item-name {
   @include ff(18px, 700, 30px);
 }
 
-.review-item__text {
+.review__item-text {
   @include ff(14px, 400, 30px);
 }
 
-.review-sliders {
+.review__sliders {
   width: 62px;
   display: flex;
   justify-content: space-between;
   margin: 18px auto 0 auto;
 }
 
-.review-sliders__item {
+.review__sliders-item {
   display: inline-block;
   width: 6px;
   height: 6px;
@@ -39,6 +39,15 @@
   border-radius: 50%;
   background-color: #283645;
   opacity: .3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .1;
+  }
 
   &--active {
     background-color: #ffffff;
@@ -47,29 +56,33 @@
   }
 }
 
+.review__list-link {
+  display: none;
+}
+
 @media ($tablet) {
 
   .review {
-    padding-top: 107px;
+    padding-top: 77px;
   }
 
-  .review-list {
+  .review__list {
     margin-bottom: 33px;
   }
 
-  .review-item__name {
+  .review__item-name {
     order: 2;
     @include ff(20px, 700, 30px);
     margin-bottom: 3px;
   }
 
-  .review-item__text {
+  .review__item-text {
     order: 1;
     @include ff(18px, 400, 30px);
     margin-bottom: 35px;
   }
 
-  .review-item__status {
+  .review__item-status {
     @include ff(14px, 400, 30px);
     display: block;
     order: 3;
@@ -79,28 +92,51 @@
 @media ($desktop) {
 
   .review {
-    margin-bottom: 95px; /*  Временно  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    padding-top: 72px;
+    margin-bottom: 37px;
   }
 
-  .review-main {
+  .review__main {
     position: relative;
   }
 
-  .review-item {
+  .review__item {
     width: 690px;
     margin: 0 auto;
   }
 
-  .review-item__name {
+  .review__item-name {
     @include ff(24px, 700, 30px);
   }
 
-  .review-item__text,
-  .review-item__status {
+  .review__item-text,
+  .review__item-status {
     @include ff(18px, 400, 30px);
   }
 
-  .review-sliders {
+  .review__sliders {
     display: none;
+  }
+
+  .review__list {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .review__list-link {
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 41px;
+    font-size: 0;
+    top: 50px;
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
   }
 }

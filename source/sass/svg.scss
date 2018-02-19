@@ -145,10 +145,10 @@
   }
 }
 
-.icon-review-arrow-left,
-.icon-review-arrow-right {
-  display: none;
-}
+//.icon-review-arrow-left,
+//.icon-review-arrow-right {
+//  display: none;
+//}
 
 .icon-quotes {
   fill: #efefef;
@@ -347,8 +347,8 @@
     display: block;
     fill: #000000;
     opacity: .3;
-    width: 22px;
-    height: 42px;
+    width: 21px;
+    height: 41px;
     cursor: pointer;
 
     &:hover {
@@ -358,15 +358,5 @@
     &:active {
       opacity: .1;
     }
-  }
-
-  .icon-review-arrow-left {
-    top: 138px;
-    left: 0;
-  }
-
-  .icon-review-arrow-right {
-    top: 138px;
-    right: 0;
   }
 }

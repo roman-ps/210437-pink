@@ -12,18 +12,18 @@
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .15);
 }
 
-.popup-title {
+.popup__title {
   margin-bottom: 30px;
 }
 
-.popup-text {
+.popup__text {
   padding: 0 20px;
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 30px;
 }
 
-.popup-btn {
+.popup__btn {
   width: 280px;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -43,13 +43,13 @@
     width: 460px;
   }
 
-  .popup-title {
+  .popup__title {
     font-size: 30px;
     line-height: 40px;
     padding: 0 71px;
   }
 
-  .popup-text {
+  .popup__text {
     font-size: 18px;
     padding: 0 71px;
   }
