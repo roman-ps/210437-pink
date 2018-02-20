@@ -381,7 +381,7 @@
   .form__progress-title,
   .form__result-title {
     @include pseudo;
-    padding: 0 10px;
+    padding: 0 25px;
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -391,14 +391,17 @@
   }
 
   .form__contact-title {
+    padding: 0 30px;
     top: -16px;
   }
 
   .form__progress-title {
+    padding: 0 30px;
     top: -22px;
   }
 
   .form__result-title {
+    padding: 0 37px;
     top: -17px;
   }
 

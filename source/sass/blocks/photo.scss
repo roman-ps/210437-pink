@@ -71,14 +71,14 @@
   position: relative;
 }
 
-.photo__comment-like::before {
+.photo__comment-img {
+  font-size: 0;
   @include pseudo;
   background: transparent url("../img/icon-heart.svg") no-repeat;
   width: 13px;
   height: 12px;
   top: 4px;
   left: 0;
-  cursor: pointer;
 }
 
 @media ($tablet) {
@@ -163,14 +163,14 @@
     }
   }
 
-  .photo__comment-like::before {
-    top: 4px;
-    left: 228px;
+  .photo__comment-img {
+    top: 6px;
+    left: 227px;
   }
 
-  .photo__comment-like--top::before {
-    top: 5px;
-    left: 108px;
+  .photo__comment-img--top {
+    top: 6px;
+    left: 107px;
   }
 
   .photo__comment-like {
