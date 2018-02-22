@@ -101,5 +101,5 @@ gulp.task("build", function(fn) {
 //    "webp",
     "sprite",
     fn
-   );
+  );
 });

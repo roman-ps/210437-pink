@@ -92,7 +92,7 @@
   background-repeat: no-repeat;
   background-position: 50% 25%;
   background-size: 700px auto;
-  background-color: #000000;
+  background-color: #485461;
 
   @media #{$retina} {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -276,11 +276,11 @@
     @include h2-desktop;
 
     &--photo {
-    width: 355px;
+      width: 355px;
     }
 
     &--form {
-     width: 479px;
+      width: 479px;
     }
   }
 
