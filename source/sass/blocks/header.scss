@@ -16,11 +16,26 @@
 .header__close,
 .header__open {
   font-size: 0;
-  display: none;
   background-color: transparent;
   padding: 0;
   border: none;
   cursor: pointer;
+}
+
+.header__open {
+  display: block;
+}
+
+.header__close {
+  display: none;
+}
+
+.header__btn-show {
+  display: block;
+}
+
+.header__btn-hide {
+  display: none;
 }
 
 .header__close {
@@ -36,6 +51,11 @@
 .header__menu {
   padding-left: 0;
   margin-bottom: 0;
+  display: none;
+}
+
+.header__menu-show {
+  display: block;
 }
 
 .header__menu-item {
@@ -345,6 +365,7 @@
 
   .header__menu {
     margin-top: 46px;
+    display: block;
   }
 
   .header__menu-item {
@@ -418,5 +439,10 @@
 
   .header--form .header__bg {
     padding-bottom: 98px;
+  }
+
+  .header__close,
+  .header__open {
+    display: none;
   }
 }

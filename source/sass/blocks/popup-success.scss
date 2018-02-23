@@ -12,6 +12,10 @@
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .35);
 }
 
+.popup-success__show {
+  display: block;
+}
+
 .popup-success__head {
   margin-bottom: 30px;
 }
@@ -42,6 +46,7 @@
   border-radius: 2px;
   padding: 16px 45px 16px 45px;
   margin-bottom: 22px;
+  cursor: pointer;
 }
 
 @media ($tablet) {
