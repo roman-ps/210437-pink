@@ -281,6 +281,7 @@
   }
 
   .upload__options-item {
+    cursor: pointer;
 
     &--bright {
       margin-top: 0;
@@ -324,6 +325,7 @@
   }
 
   .upload__submit-item {
+    cursor: pointer;
     width: auto;
     box-sizing: border-box;
     width: 185px;

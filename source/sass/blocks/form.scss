@@ -179,6 +179,11 @@
 }
 
 .form input,
+.form label {
+  cursor: pointer;
+}
+
+.form input,
 .form__result-text {
   font-family: $fonts;
   outline: 0;
@@ -188,6 +193,10 @@
 .form input[type="radio"] {
   display: none;
 }
+
+//.form input[type="checkbox"]:focus + label {
+//  outline: 1px solid transparent;
+//}
 
 .form input[type="checkbox"] + label,
 .form input[type="radio"] + label {

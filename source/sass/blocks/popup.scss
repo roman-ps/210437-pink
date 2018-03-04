@@ -12,6 +12,10 @@
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .15);
 }
 
+.popup__show {
+  display: block;
+}
+
 .popup__title {
   margin-bottom: 30px;
 }
@@ -35,6 +39,7 @@
   margin-bottom: 42px;
   font-size: 18px;
   line-height: 30px;
+  cursor: pointer;
 }
 
 @media ($tablet) {
