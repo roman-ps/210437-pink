@@ -29,10 +29,10 @@ close.addEventListener("click", function(event) {
 form.addEventListener("submit", function(event) {
   if ((!name.value) || (!surname.value) || (!mail.value)) {
     event.preventDefault();
-    popupNo.classList.add("popup__show");
+    popup.classList.add("popup-success__show");
   } else {
     event.preventDefault();
-    popup.classList.add("popup-success__show");
+    popupNo.classList.add("popup__show");
   }
 });
 
